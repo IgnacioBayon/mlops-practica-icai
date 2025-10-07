@@ -2,6 +2,8 @@ import streamlit as st
 import requests 
 import json 
 import numpy as np 
+import os
+
 # Título de la aplicación 
 st.title('API de Predicción del Modelo Iris') 
 # Descripción de la aplicaciónst.write('Ingresa las características de la flor de iris para obtener una predicción de su especie.') 
@@ -19,7 +21,8 @@ if st.button('Obtener Predicción'):
     payload = {'features': features} 
  
     # URL de la API de predicción (cambia esta URL si la API no está en esa url) 
-    api_url = 'http://localhost:5000/predict' 
+    # api_url = 'http://localhost:5000/predict' 
+    api_url = os.environ.get('API_URL')
  
     try: 
         # Enviar la petición a la API 
