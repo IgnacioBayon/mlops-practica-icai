@@ -16,6 +16,6 @@ spec:
     spec: 
       containers: 
       - name: mlops-api 
-        image: gcr.io/im-gke/mlops-api:latest  # <--- Reemplaza con la ruta de tu imagen 
+        image: gcr.io/icai-im/mlops-api:latest  # <--- Reemplaza con la ruta de tu imagen 
         ports: 
         - containerPort: 5000 
